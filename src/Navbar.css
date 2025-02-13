@@ -1,4 +1,9 @@
-.navbar {
+/* global css */
+* {
+  font-family: "Open Sans";
+}
+
+.filter_navbar {
   background-color: #f8f9fa;
   padding: 15px;
   display: flex;
@@ -9,34 +14,33 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbar.expanded {
+.filter_navbar.expanded {
   display: flex;
   align-items: flex-start;
   transition: all 0.3s ease-in-out;
 }
 
-.nav-container {
+.filter_nav_container {
   width: 100%;
 }
 
-.nav-menu {
+.filter_nav_menu {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.nav-item {
+.filter_nav_item {
   margin: 0 15px;
   position: relative;
 }
 
-.nav-link {
+.filter_nav_link {
   background: none;
-  font-family: "Open Sans";
   border: none;
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 500;
   color: #333;
   cursor: pointer;
   padding: 10px;
@@ -45,21 +49,20 @@
   gap: 5px;
 }
 
-.nav-link:hover {
-  font-weight: bold;
+.filter_nav_link:hover {
+  font-weight: 600;
 }
-.dropdown-menu {
+.filter_dropdown_menu {
   position: absolute;
   left: 0;
   top: 100%;
   background: transparent;
-  padding: 10px;
+  padding: 8px;
   width: 100%;
-  z-index: 10;
   display: flex;
 }
 
-.dropdown-item {
+.filter_dropdown_item {
   display: flex;
   align-items: center;
   padding: 10px 12px;
@@ -67,33 +70,33 @@
   list-style: none;
 }
 
-.dropdown-item input {
+.filter_dropdown_item input {
   margin-right: 10px;
 }
 
-.dropdown-item:hover {
+.filter_dropdown_item:hover {
   background: #ddd;
 }
 
-.downArrowIcon {
+.filter_downArrowIcon {
   padding-left: 2px;
   width: 15px;
   height: 12px;
 }
 
-.selected-filters {
+.selected_filters_row {
   margin: 10px 0;
   display: flex;
 }
 
-.selected-filters p {
+.selected_filters_row p {
   margin: 0;
   font-family: "Open Sans";
   color: gray;
   font-weight: bold;
 }
 
-.filter-tag {
+.filter_tag {
   display: inline-block;
   margin: 0 5px;
   padding: 5px 10px;
@@ -103,7 +106,7 @@
   font-weight: 300;
 }
 
-.btn-Clear-all {
+.filter_btn_Clear_all {
   margin-left: 10px;
   font-size: 15px;
   background: transparent;

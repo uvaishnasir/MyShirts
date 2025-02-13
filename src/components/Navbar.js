@@ -77,20 +77,20 @@ const Navbar = ({ onFilterChange }) => {
   return (
     <>
       <nav
-        className={`navbar ${openDropdown ? "expanded" : ""}`}
+        className={`filter_navbar ${openDropdown ? "expanded" : ""}`}
         style={{ height: dropdownHeight ? dropdownHeight + 40 + "px" : "auto" }}
       >
-        <div className="nav-container">
-          <ul className="nav-menu">
+        <div className="filter_nav_container">
+          <ul className="filter_nav_menu">
             {Object.keys(filters).map((category) => (
-              <li key={category} className="nav-item">
+              <li key={category} className="filter_nav_item">
                 <button
-                  className="nav-link"
+                  className="filter_nav_link"
                   onClick={() => toggleDropdown(category)}
                 >
                   {category}
                   <img
-                    className="downArrowIcon"
+                    className="filter_downArrowIcon"
                     alt="Expand"
                     src={
                       openDropdown === category ? upArrowIcon : downArrowIcon
@@ -99,9 +99,9 @@ const Navbar = ({ onFilterChange }) => {
                 </button>
 
                 {openDropdown === category && (
-                  <ul className="dropdown-menu" ref={dropdownRef}>
+                  <ul className="filter_dropdown_menu" ref={dropdownRef}>
                     {filters[category].map((item, index) => (
-                      <li key={index} className="dropdown-item">
+                      <li key={index} className="filter_dropdown_item">
                         <input
                           type="checkbox"
                           checked={
@@ -122,18 +122,18 @@ const Navbar = ({ onFilterChange }) => {
       </nav>
 
       {Object.keys(selectedFilters).length > 0 && (
-        <div className="selected-filters">
+        <div className="selected_filters_row">
           <p>
             REFINE BY:
             {Object.keys(selectedFilters).map((category) =>
               selectedFilters[category].map((item, index) => (
-                <span key={`${category}-${index}`} className="filter-tag">
+                <span key={`${category}-${index}`} className="filter_tag">
                   {item}
                 </span>
               ))
             )}
           </p>
-          <button className="btn-Clear-all" onClick={clearFilters}>
+          <button className="filter_btn_Clear_all" onClick={clearFilters}>
             Clear All
           </button>
         </div>

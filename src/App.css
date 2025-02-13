@@ -1,82 +1,10 @@
-.container {
+.filter_page_container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.product-card {
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.product-card:hover {
-  transform: scale(1.02);
-}
-
-.product-image {
-  width: 100%;
-  object-fit: cover;
-}
-
-.product-name {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.product-price {
-  font-size: 1rem;
-  color: #333;
-  font-weight: bold;
-}
-
-.mrp {
-  text-decoration: line-through;
-  color: #999;
-  margin-left: 8px;
-}
-
-.discount {
-  font-size: 0.9rem;
-  color: #9e5d5d;
-  font-weight: bold;
-}
-
-@media (min-width: 1024px) {
-  .product-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 350px) {
-  .product-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.pageHeading {
+.filter_page_heading {
   color: rgb(62, 77, 112);
   font-family: "Open Sans";
   font-style: normal;
@@ -84,4 +12,73 @@
   text-align: left;
 }
 
+.filter_page_product_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+.filter_page_product_card {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.filter_page_product_card:hover {
+  transform: scale(1.02);
+}
+
+.filter_page_product_image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.filter_page_product_name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.filter_page_product_price {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.filter_page_mrp {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 8px;
+}
+
+.filter_page_discount {
+  font-size: 0.9rem;
+  color: #9e5d5d;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .filter_page_product_grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filter_page_product_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .filter_page_product_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 350px) {
+  .filter_page_product_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

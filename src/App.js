@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import ScratchCard from "./components/ScratchCard";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -42,23 +43,25 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <h1 className="pageHeading">Men's Printed Shirts</h1>
+    <div className="filter_page_container">
+      <ScratchCard />
+      <h1 className="filter_page_heading">Men's Printed Shirts</h1>
       <Navbar onFilterChange={handleFilterChange} />
-      <div className="product-grid">
+      <div className="filter_page_product_grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <div key={product.id} className="product-card">
+            <div key={product.id} className="filter_page_product_card">
               <img
                 src={product.image}
                 alt={product.alt}
-                className="product-image"
+                className="filter_page_product_image"
               />
-              <h3 className="product-name">{product.name}</h3>
-              <p className="product-price">
-                ₹{product.Price} <span className="mrp">₹{product.mrp}</span>
+              <h3 className="filter_page_product_name">{product.name}</h3>
+              <p className="filter_page_product_price">
+                ₹{product.Price}{" "}
+                <span className="filter_page_mrp">₹{product.mrp}</span>
               </p>
-              <p className="discount">{product.discount}% Off</p>
+              <p className="filter_page_discount">{product.discount}% Off</p>
             </div>
           ))
         ) : (
