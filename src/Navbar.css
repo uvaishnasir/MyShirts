@@ -4,6 +4,7 @@
 }
 
 .filter_navbar {
+  width: 100%;
   background-color: #f8f9fa;
   padding: 15px;
   display: flex;
@@ -87,6 +88,8 @@
 .selected_filters_row {
   margin: 10px 0;
   display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
 }
 
 .selected_filters_row p {

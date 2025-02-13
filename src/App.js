@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import ScratchCard from "./components/ScratchCard";
+import ScratchCardComponent from "./components/ScratchCardComponent";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filters, setFilters] = useState({});
+  const [showScratchCard, setShowScratchCard] = useState(true);
 
   useEffect(() => {
-    fetch("products/products.json") // Ensure the correct path
+    fetch("products/products.json")
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching products:", error));
@@ -44,7 +45,11 @@ function App() {
 
   return (
     <div className="filter_page_container">
-      <ScratchCard />
+      {showScratchCard && (
+        <div className="scratch_card_overlay">
+          <ScratchCardComponent onClose={() => setShowScratchCard(false)} />
+        </div>
+      )}
       <h1 className="filter_page_heading">Men's Printed Shirts</h1>
       <Navbar onFilterChange={handleFilterChange} />
       <div className="filter_page_product_grid">
