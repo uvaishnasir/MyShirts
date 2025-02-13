@@ -11,7 +11,8 @@
     "Sleeves": "Half Sleeve",
     "Size": "M",
     "Pattern": "Printed",
-    "Collar": "Spread"
+    "Collar": "Spread",
+    "Fabric": "Cotton Stretch"
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
     "Sleeves": "Full Sleeve",
     "Size": "M",
     "Pattern": "Checked",
-    "Collar": "Regular"
+    "Collar": "Regular",
+    "Fabric": "100% Cotton"
   },
   {
     "id": 3,
@@ -33,13 +35,14 @@
     "mrp": 2999,
     "Price": 2499,
     "discount": 17,
-    "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH07974LS-White_01_d993e0d4-f423-4a28-9cd9-44d683123eba.jpg?v=1733556969&width=500",
+    "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH06106LS-Rust_02.jpg?v=1707620689&width=500",
     "alt": "Red Shirt",
     "Color": "Red",
     "Sleeves": "Full Sleeve",
     "Size": "S",
     "Pattern": "Printed",
-    "Collar": "Spread"
+    "Collar": "Spread",
+    "Fabric": "Cotton Stretch"
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "Sleeves": "Half Sleeve",
     "Size": "L",
     "Pattern": "Printed",
-    "Collar": "Regular"
+    "Collar": "Regular",
+    "Fabric": "Cotton Blend"
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@
     "Sleeves": "Full Sleeve",
     "Size": "M",
     "Pattern": "Printed",
-    "Collar": "Regular"
+    "Collar": "Regular",
+    "Fabric": "100% Cotton"
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@
     "Sleeves": "Half Sleeve",
     "Size": "XL",
     "Pattern": "Striped",
-    "Collar": "Regular"
+    "Collar": "Regular",
+    "Fabric": "Cotton Stretch"
   },
   {
     "id": 7,
@@ -95,7 +101,8 @@
     "Sleeves": "Full Sleeve",
     "Size": "L",
     "Pattern": "Striped",
-    "Collar": "Mandarin"
+    "Collar": "Mandarin",
+    "Fabric": "Cotton Blend"
   },
   {
     "id": 8,
@@ -109,7 +116,8 @@
     "Sleeves": "Half Sleeve",
     "Size": "XXL",
     "Pattern": "Printed",
-    "Collar": "Regular"
+    "Collar": "Regular",
+    "Fabric": "Cotton Viscose"
   },
   {
     "id": 9,
@@ -123,7 +131,8 @@
     "Sleeves": "Half Sleeve",
     "Size": "S",
     "Pattern": "Printed",
-    "Collar": "Regular"
+    "Collar": "Regular",
+    "Fabric": "Linen Blend"
   },
   {
     "id": 10,
@@ -137,7 +146,8 @@
     "Sleeves": "Full Sleeve",
     "Size": "M",
     "Pattern": "Striped",
-    "Collar": "Mandarin"
+    "Collar": "Mandarin",
+    "Fabric": "Linen"
   },
   {
     "id": 11,
@@ -151,7 +161,8 @@
     "Sleeves": "Half Sleeve",
     "Size": "XL",
     "Pattern": "Printed",
-    "Collar": "Regular"
+    "Collar": "Regular",
+    "Fabric": "Cotton Viscose"
   },
   {
     "id": 12,
@@ -165,6 +176,7 @@
     "Sleeves": "Full Sleeve",
     "Size": "XXL",
     "Pattern": "Checked",
-    "Collar": "Spread"
+    "Collar": "Spread",
+    "Fabric": "Cotton Blend"
   }
 ]

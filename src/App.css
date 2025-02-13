@@ -49,7 +49,7 @@
 
 .discount {
   font-size: 0.9rem;
-  color: #d32f2f;
+  color: #9e5d5d;
   font-weight: bold;
 }
 
@@ -84,24 +84,4 @@
   text-align: left;
 }
 
-.sidebar {
-  display: flex;
-  width: 250px;
-  padding: 15px;
-  background-color: #f8f8f8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-right: 20px;
-}
 
-.sidebar h2 {
-  margin-bottom: 10px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin-bottom: 5px;
-}

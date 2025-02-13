@@ -66,49 +66,79 @@ const Navbar = ({ onFilterChange }) => {
     });
   };
 
-  return (
-    <nav
-      className={`navbar ${openDropdown ? "expanded" : ""}`}
-      style={{ height: dropdownHeight ? dropdownHeight + 40 + "px" : "auto" }}
-    >
-      <div className="nav-container">
-        <ul className="nav-menu">
-          {Object.keys(filters).map((category) => (
-            <li key={category} className="nav-item">
-              <button
-                className="nav-link"
-                onClick={() => toggleDropdown(category)}
-              >
-                {category}
-                <img
-                  className="downArrowIcon"
-                  alt="Expand"
-                  src={openDropdown === category ? upArrowIcon : downArrowIcon}
-                />
-              </button>
+  const clearFilters = () => {
+    setSelectedFilters({});
+    onFilterChange({});
+    document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+  };
 
-              {openDropdown === category && (
-                <ul className="dropdown-menu" ref={dropdownRef}>
-                  {filters[category].map((item, index) => (
-                    <li key={index} className="dropdown-item">
-                      <input
-                        type="checkbox"
-                        checked={
-                          selectedFilters[category] &&
-                          selectedFilters[category].includes(item)
-                        }
-                        onChange={() => handleCheckboxChange(category, item)}
-                      />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+  return (
+    <>
+      <nav
+        className={`navbar ${openDropdown ? "expanded" : ""}`}
+        style={{ height: dropdownHeight ? dropdownHeight + 40 + "px" : "auto" }}
+      >
+        <div className="nav-container">
+          <ul className="nav-menu">
+            {Object.keys(filters).map((category) => (
+              <li key={category} className="nav-item">
+                <button
+                  className="nav-link"
+                  onClick={() => toggleDropdown(category)}
+                >
+                  {category}
+                  <img
+                    className="downArrowIcon"
+                    alt="Expand"
+                    src={
+                      openDropdown === category ? upArrowIcon : downArrowIcon
+                    }
+                  />
+                </button>
+
+                {openDropdown === category && (
+                  <ul className="dropdown-menu" ref={dropdownRef}>
+                    {filters[category].map((item, index) => (
+                      <li key={index} className="dropdown-item">
+                        <input
+                          type="checkbox"
+                          checked={
+                            selectedFilters[category] &&
+                            selectedFilters[category].includes(item)
+                          }
+                          onChange={() => handleCheckboxChange(category, item)}
+                        />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      {Object.keys(selectedFilters).length > 0 && (
+        <div className="selected-filters">
+          <p>
+            REFINE BY:
+            {Object.keys(selectedFilters).map((category) =>
+              selectedFilters[category].map((item, index) => (
+                <span key={`${category}-${index}`} className="filter-tag">
+                  {item}
+                </span>
+              ))
+            )}
+          </p>
+          <button className="btn-Clear-all" onClick={clearFilters}>
+            Clear All
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

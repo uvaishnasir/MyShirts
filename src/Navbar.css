@@ -80,3 +80,37 @@
   width: 15px;
   height: 12px;
 }
+
+.selected-filters {
+  margin: 10px 0;
+  display: flex;
+}
+
+.selected-filters p {
+  margin: 0;
+  font-family: "Open Sans";
+  color: gray;
+  font-weight: bold;
+}
+
+.filter-tag {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #efeded;
+  color: #333;
+  border-radius: 25px;
+  font-weight: 300;
+}
+
+.btn-Clear-all {
+  margin-left: 10px;
+  font-size: 15px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: underline;
+}
