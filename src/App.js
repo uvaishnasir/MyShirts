@@ -5,9 +5,8 @@ import BlogPage from "./components/BlogPage.jsx";
 import Navlink from "./components/NavLink.jsx";
 function App() {
   return (
-
     <Router>
-    <Navlink/>
+      <Navlink />
       <Routes>
         <Route path="/" element={<FilterPage />} />
         <Route path="/blog" element={<BlogPage />} />

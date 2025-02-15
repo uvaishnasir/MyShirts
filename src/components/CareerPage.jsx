@@ -1,5 +1,5 @@
 import React from "react";
-import careerImage from "../careerPagePNG.webp";
+import careerImage from "../assets/images/careerPagePNG.webp";
 import { FaUsers, FaChartLine, FaBuilding, FaHandshake } from "react-icons/fa";
 import "../CSS/CareerPage.css";
 
@@ -41,7 +41,7 @@ const CareerPage = () => {
     >
       <div className="mb-5">
         <div
-          className="text-center p-5 rounded"
+          className="text-center p-5"
           style={{ backgroundColor: "#2F5FD0", color: "white" }}
         >
           <h1 className="mt-3 fw-bold">

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
+import "../CSS/FilterPage.css";
 import Navbar from "./Navbar.jsx";
 import ScratchCardComponent from "./ScratchCardComponent.jsx";
-import { useNavigate } from "react-router-dom";
+
 function FilterPage() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filters, setFilters] = useState({});
   const [showScratchCard, setShowScratchCard] = useState(true);
-  const navigate = useNavigate();
   useEffect(() => {
     fetch("products/products.json")
       .then((response) => response.json())

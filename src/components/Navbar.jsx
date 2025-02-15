@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Navbar.css";
-import downArrowIcon from "../svg-dropdown.png";
-import upArrowIcon from "../svg-dropdown-open.png";
+import downArrowIcon from "../assets/images/svg-dropdown.png";
+import upArrowIcon from "../assets/images/svg-dropdown-open.png";
 
 const filters = {
   Fabric: [

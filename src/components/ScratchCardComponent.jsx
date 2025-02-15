@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import ScratchCard from "react-scratchcard";
 import "../CSS/ScratchCard.css";
-import ScratchPNG from "../scratchPNG.png";
+import ScratchPNG from "../assets/images/scratchPNG.png";
 import Confetti from "react-confetti";
 
 const ScratchCardComponent = ({ onClose }) => {
