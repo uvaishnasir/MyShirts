@@ -1,0 +1,95 @@
+/* General Styling */
+.blog-page {
+  background: #fef8ee;
+  font-family: "Arial", sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 40px 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Subscription Box */
+.subscription-form {
+  min-width: 300px; /* Ensures usability on smaller screens */
+}
+.subscription-form input {
+  border-radius: 0px;
+}
+/* Match button height with input */
+.subscription-form .btn {
+  height: 100%;
+  white-space: nowrap;
+  padding: 0px 10px;
+  border-radius: 0px;
+}
+
+/* Recent Blogs */
+.recent-blogs {
+  padding: 40px 0;
+}
+
+/* Blog Card Styles */
+.blog-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Large Blog Card */
+.blog-card.large img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Small Blog Card */
+.blog-card.small {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.blog-card.small .row {
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.blog-card.small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Blog Info */
+.blog-info {
+  padding: 15px;
+}
+
+.blog-info h5 {
+  font-weight: bold;
+}
+
+/* Tags */
+.tags {
+  margin-top: 10px;
+}

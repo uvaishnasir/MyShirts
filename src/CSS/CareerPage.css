@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.card {
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure text wraps properly inside the card */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Prevent overflowing text */
+.card-text {
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+/* Handle button alignment */
+.card .btn {
+  width: 100%;
+  max-width: 200px;
+  align-self: center; /* Center the button in small screens */
+}
+
+/* Make cards responsive */
+@media (max-width: 768px) {
+  .card {
+    height: auto !important; /* Allow height to adjust dynamically */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* Reduce font size for better fit */
+  }
+
+  .text-center h1 {
+    font-size: 1.8rem; /* Adjust title size */
+  }
+
+  .text-center p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+}

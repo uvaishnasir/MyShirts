@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import ScratchCard from "react-scratchcard";
-import "../ScratchCard.css";
+import "../CSS/ScratchCard.css";
 import ScratchPNG from "../scratchPNG.png";
 import Confetti from "react-confetti";
 

@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import "../Navbar.css";
+import React, { useState, useEffect } from "react";
+import "../CSS/Navbar.css";
 import downArrowIcon from "../svg-dropdown.png";
 import upArrowIcon from "../svg-dropdown-open.png";
 
@@ -23,46 +23,32 @@ const filters = {
   Sleeves: ["Full Sleeve", "Half Sleeve", "Sleeveless"],
   Pattern: ["Plain", "Printed", "Checked", "Striped"],
   Collar: ["Regular", "Mandarin", "Spread", "Button-Down"],
-  Price: ["Under ₹500", "₹500-₹1000", "₹1000-₹2000", "₹2000+"],
+  PriceCategory: ["Under ₹500", "₹500-₹1000", "₹1000-₹2000", "₹2000+"],
 };
 
 const Navbar = ({ onFilterChange }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [selectedFilters, setSelectedFilters] = useState({});
-  const dropdownRef = useRef(null);
-  const [dropdownHeight, setDropdownHeight] = useState(0);
-
-  const toggleDropdown = (category) => {
-    if (openDropdown === category) {
-      setOpenDropdown(null);
-      setDropdownHeight(0);
-    } else {
-      setOpenDropdown(category);
-    }
-  };
 
   useEffect(() => {
-    if (openDropdown) {
-      const height = dropdownRef.current?.offsetHeight || 0;
-      setDropdownHeight(height);
-    }
-    onFilterChange(selectedFilters);
-  }, [openDropdown, selectedFilters, onFilterChange]);
+    onFilterChange(selectedFilters); // Ensure filters update correctly
+  }, [selectedFilters, onFilterChange]);
+
+  const toggleDropdown = (category) => {
+    setOpenDropdown(openDropdown === category ? null : category);
+  };
 
   const handleCheckboxChange = (category, item) => {
     setSelectedFilters((prevFilters) => {
-      const categoryFilters = prevFilters[category] || [];
-      if (categoryFilters.includes(item)) {
-        return {
-          ...prevFilters,
-          [category]: categoryFilters.filter((i) => i !== item),
-        };
-      } else {
-        return {
-          ...prevFilters,
-          [category]: [...categoryFilters, item],
-        };
-      }
+      const updatedCategoryFilters = prevFilters[category] || [];
+      const newFilters = updatedCategoryFilters.includes(item)
+        ? updatedCategoryFilters.filter((i) => i !== item) // Remove item
+        : [...updatedCategoryFilters, item]; // Add item
+
+      return {
+        ...prevFilters,
+        [category]: newFilters.length ? newFilters : undefined, // Remove empty categories
+      };
     });
   };
 
@@ -76,10 +62,7 @@ const Navbar = ({ onFilterChange }) => {
 
   return (
     <>
-      <nav
-        className={`filter_navbar ${openDropdown ? "expanded" : ""}`}
-        style={{ height: dropdownHeight ? dropdownHeight + 40 + "px" : "auto" }}
-      >
+      <nav className={`filter_navbar ${openDropdown ? "expanded" : ""}`}>
         <div className="filter_nav_container">
           <ul className="filter_nav_menu">
             {Object.keys(filters).map((category) => (
@@ -99,14 +82,13 @@ const Navbar = ({ onFilterChange }) => {
                 </button>
 
                 {openDropdown === category && (
-                  <ul className="filter_dropdown_menu" ref={dropdownRef}>
+                  <ul className="filter_dropdown_menu">
                     {filters[category].map((item, index) => (
                       <li key={index} className="filter_dropdown_item">
                         <input
                           type="checkbox"
                           checked={
-                            selectedFilters[category] &&
-                            selectedFilters[category].includes(item)
+                            selectedFilters[category]?.includes(item) || false
                           }
                           onChange={() => handleCheckboxChange(category, item)}
                         />
@@ -125,8 +107,8 @@ const Navbar = ({ onFilterChange }) => {
         <div className="selected_filters_row">
           <p>
             REFINE BY:
-            {Object.keys(selectedFilters).map((category) =>
-              selectedFilters[category].map((item, index) => (
+            {Object.keys(selectedFilters).flatMap((category) =>
+              selectedFilters[category]?.map((item, index) => (
                 <span key={`${category}-${index}`} className="filter_tag">
                   {item}
                 </span>

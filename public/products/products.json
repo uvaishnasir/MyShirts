@@ -12,13 +12,14 @@
     "Size": "M",
     "Pattern": "Printed",
     "Collar": "Spread",
-    "Fabric": "Cotton Stretch"
+    "Fabric": "Cotton Stretch",
+    "PriceCategory": "₹2000+"
   },
   {
     "id": 2,
     "name": "Men Printed Full Sleeve Cotton Shirt - Dark Grey",
-    "mrp": 2999,
-    "Price": 2499,
+    "mrp": 249,
+    "Price": 209,
     "discount": 17,
     "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH08088LS-Red_01_80ec6a41-007b-4313-be89-cc2e793bd60b.jpg?v=1733557148&width=500",
     "alt": "Dark Grey Shirt",
@@ -27,13 +28,14 @@
     "Size": "M",
     "Pattern": "Checked",
     "Collar": "Regular",
-    "Fabric": "100% Cotton"
+    "Fabric": "100% Cotton",
+    "PriceCategory": "Under ₹500"
   },
   {
     "id": 3,
     "name": "Men Printed Full Sleeve Cotton Stretch Shirt - Red",
-    "mrp": 2999,
-    "Price": 2499,
+    "mrp": 1999,
+    "Price": 1499,
     "discount": 17,
     "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH06106LS-Rust_02.jpg?v=1707620689&width=500",
     "alt": "Red Shirt",
@@ -42,7 +44,8 @@
     "Size": "S",
     "Pattern": "Printed",
     "Collar": "Spread",
-    "Fabric": "Cotton Stretch"
+    "Fabric": "Cotton Stretch",
+    "PriceCategory": "₹1000-₹2000"
   },
   {
     "id": 4,
@@ -57,7 +60,8 @@
     "Size": "L",
     "Pattern": "Printed",
     "Collar": "Regular",
-    "Fabric": "Cotton Blend"
+    "Fabric": "Cotton Blend",
+    "PriceCategory": "₹2000+"
   },
   {
     "id": 5,
@@ -72,13 +76,14 @@
     "Size": "M",
     "Pattern": "Printed",
     "Collar": "Regular",
-    "Fabric": "100% Cotton"
+    "Fabric": "100% Cotton",
+    "PriceCategory": "₹2000+"
   },
   {
     "id": 6,
     "name": "Men Printed Half Sleeve Cotton Shirt - White",
-    "mrp": 2799,
-    "Price": 2299,
+    "mrp": 999,
+    "Price": 899,
     "discount": 18,
     "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH08078SS-Navy_01_78659d60-6288-4f99-9204-90610828bce7.jpg?v=1733557129&width=500",
     "alt": "White Shirt",
@@ -87,7 +92,8 @@
     "Size": "XL",
     "Pattern": "Striped",
     "Collar": "Regular",
-    "Fabric": "Cotton Stretch"
+    "Fabric": "Cotton Stretch",
+    "PriceCategory": "₹500-₹1000"
   },
   {
     "id": 7,
@@ -102,7 +108,8 @@
     "Size": "L",
     "Pattern": "Striped",
     "Collar": "Mandarin",
-    "Fabric": "Cotton Blend"
+    "Fabric": "Cotton Blend",
+    "PriceCategory": "₹2000+"
   },
   {
     "id": 8,
@@ -117,7 +124,8 @@
     "Size": "XXL",
     "Pattern": "Printed",
     "Collar": "Regular",
-    "Fabric": "Cotton Viscose"
+    "Fabric": "Cotton Viscose",
+    "PriceCategory": "₹2000+"
   },
   {
     "id": 9,
@@ -132,13 +140,14 @@
     "Size": "S",
     "Pattern": "Printed",
     "Collar": "Regular",
-    "Fabric": "Linen Blend"
+    "Fabric": "Linen Blend",
+    "PriceCategory": "₹2000+"
   },
   {
     "id": 10,
     "name": "Men Printed Full Sleeve Cotton Shirt - Maroon",
-    "mrp": 2899,
-    "Price": 2399,
+    "mrp": 899,
+    "Price": 799,
     "discount": 17,
     "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH07974LS-White_01_d993e0d4-f423-4a28-9cd9-44d683123eba.jpg?v=1733556969&width=500",
     "alt": "Maroon Shirt",
@@ -147,13 +156,14 @@
     "Size": "M",
     "Pattern": "Striped",
     "Collar": "Mandarin",
-    "Fabric": "Linen"
+    "Fabric": "Linen",
+    "PriceCategory": "₹500-₹1000"
   },
   {
     "id": 11,
     "name": "Men Printed Half Sleeve Cotton Stretch Shirt - Grey",
-    "mrp": 2999,
-    "Price": 2499,
+    "mrp": 699,
+    "Price": 599,
     "discount": 17,
     "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH07622SS-Pine_01_c204a0b8-dd80-483e-9803-080b76b42ede.jpg?v=1729093150&width=500",
     "alt": "Grey Shirt",
@@ -162,13 +172,14 @@
     "Size": "XL",
     "Pattern": "Printed",
     "Collar": "Regular",
-    "Fabric": "Cotton Viscose"
+    "Fabric": "Cotton Viscose",
+    "PriceCategory": "₹500-₹1000"
   },
   {
     "id": 12,
     "name": "Men Printed Full Sleeve Cotton Shirt - Dark Grey",
-    "mrp": 2999,
-    "Price": 2499,
+    "mrp": 399,
+    "Price": 299,
     "discount": 17,
     "image": "https://cdn.shopify.com/s/files/1/0839/1806/1866/files/ITMSH08088LS-Red_01_80ec6a41-007b-4313-be89-cc2e793bd60b.jpg?v=1733557148&width=500",
     "alt": "Dark Grey Shirt",
@@ -177,6 +188,7 @@
     "Size": "XXL",
     "Pattern": "Checked",
     "Collar": "Spread",
-    "Fabric": "Cotton Blend"
+    "Fabric": "Cotton Blend",
+    "PriceCategory": "Under ₹500"
   }
 ]
